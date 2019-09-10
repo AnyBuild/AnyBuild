@@ -8,6 +8,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.g.*proj
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -23,6 +24,12 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+
+# Domino Combined Engine outputs
+out/
+
+# Binplace output root directory
+distrib/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -328,3 +335,19 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# ext/ directory does not contain build outputs.
+!ext/**
+
+# AnyBuild client cache folder
+**/__anybuildcache/
+
+# Generated .xml files ($(OutputPath) empty in SDK .csproj files)
+AnyBuild*.xml
+
+# VS SDK-style binplace of unmanaged inputs
+**/native/amd64/
+out.txt
+
+# Side effect of testing TestBuildEngine and TestBuildTool
+ChildOut0/
