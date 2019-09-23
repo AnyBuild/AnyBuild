@@ -14,7 +14,7 @@ For a moderately large C++ heavy repo (500 proj files, 300 of them vcxproj) insi
 <img alt="6/12 Core Desktop Comparison" src="docs/images/6CoreComparison.png" width=80%>
 <img alt="2/4 Core Laptop Comparison" src="docs/images/2CoreLaptopComparison.png" width=80%>
 
-(As of Sep 22, 2019. 25 build agents plus service coordinator VM in shared 96-core team pool with from 2 to 16 cores per agent, which would cost approximately $250/month in VM time when running only during business hours. cl.exe remoting only. Debug build with no LTCG linking. MSBuild parallelism settings at +50% meaning /m:18 for the 6/12 core and /m:6 for the 2/4 core. AnyBuild MinParallelism=4 to remote only larger compilations.)
+(As of Sep 22, 2019. 25 build agents plus service coordinator VM in shared 96-core team pool with from 2 to 16 cores per agent, Azure D2 v2 Windows SKU, which would cost approximately $2000/month in VM time when running only during business hours 50 hours/week and paying full retail per-hour prices. cl.exe remoting only. Debug full build with no LTCG linking. MSBuild parallelism settings at +50% meaning /m:18 for the 6/12 core and /m:6 for the 2/4 core. AnyBuild MinParallelism=4 to remote only larger compilations.)
 
 ## More Details
 AnyBuild provides the following benefits for developers:
