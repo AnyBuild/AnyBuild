@@ -32,7 +32,7 @@ AnyBuild provides the following benefits for developers:
 * No registry remoting. Tools must not rely on the agent's registry as there is nothing installed there but a base Windows 10 1903+ image.
 
 ## Remoting More Than MSBuild
-With specific settings you can remote just about anything, and wrap just about any top-level build process. AnyBuild uses Windows Detours logic to hook CreateProcess calls and decides what to remote and what to run locally.
+With specific settings you can remote just about anything, and wrap just about any top-level build process. AnyBuild uses Windows [Detours](https://github.com/Microsoft/Detours) logic to hook CreateProcess calls and decides what to remote and what to run locally.
 
 We've run Gulp builds with remoting of Mocha unit tests. If the top-level build tool is a graphics rendering coordinator that can run multiple sub-processes in parallel, you can remote the rendering jobs to beefy multi-core or GPU-enabled agents (of course, check your software's licensing agreements, and remember if it checks the registry it's not going to work.) Refactor a TensorFlow training set into multiple sub-processes run under a build engine and remote the individual training processes to big agents.
 
