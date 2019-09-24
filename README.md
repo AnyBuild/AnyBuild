@@ -3,7 +3,9 @@
 <img alt="AnyBuild Icon" src="src/Branding/AnyBuild215x215.png" width=15%>
 
 ## Introduction
-AnyBuild is a forthcoming open source release of a build remote execution system that allows seamlessly remoting developer desktop and build agent load into Microsoft Azure. For larger code repositories this can result in significant speedups, particularly for less capable dev machines and build VMs. AnyBuild remotes the most expensive operations while leaving small build-test-rebuild commands just as fast.
+AnyBuild is a build remote execution system that allows seamlessly remoting developer desktop and build agent load into Microsoft Azure. For larger code repositories this can result in significant speedups, particularly for less capable dev machines and build VMs. AnyBuild remotes the most expensive operations while leaving small build-test-rebuild commands just as fast.
+
+See the London Build Meetup (October 1, 2019) [slides](./docs/presentations/20191001_MicrosoftRemoteExecution_LondonBuildMeetup.pptx]).
 
 AnyBuild handles build engines like [MSBuild](https://github.com/Microsoft/MSBuild) that do not specify inputs and outputs sufficiently for caching, and tools that bleed machine-specific paths into their outputs. Its Azure build agents do not need pre-installed tools; the tools are uploaded from the dev machine dynamically, cached for reuse, and executed under the same drive letters and paths as they would be on the dev machine or build agent, resulting in the same build outputs.
 
