@@ -5,7 +5,7 @@
 ## Introduction
 AnyBuild is a build remote execution system that allows seamlessly remoting developer desktop and build agent load into Microsoft Azure. For larger code repositories this can result in significant speedups, particularly for less capable dev machines and build VMs. AnyBuild remotes the most expensive operations while leaving small build-test-rebuild commands just as fast.
 
-See the London Build Meetup (October 1, 2019) [slides](./docs/presentations/20191001_MicrosoftRemoteExecution_LondonBuildMeetup.pptx).
+See the London Build Meetup (October 1, 2019) [slides](./docs/presentations/20191001_MicrosoftRemoteExecution_LondonBuildMeetup.pptx). A slightly updated but much shorter version for the Facebook SEattle CI Meetup (November 20, 2019) is [here](./docs/presentations/20191120_MicrosoftRemoteExecution_FacebookCIMeetup.pptx).
 
 AnyBuild handles build engines like [MSBuild](https://github.com/Microsoft/MSBuild) that do not specify inputs and outputs sufficiently for caching, and tools that bleed machine-specific paths into their outputs. Its Azure build agents do not need pre-installed tools; the tools are uploaded from the dev machine dynamically, cached for reuse, and executed under the same drive letters and paths as they would be on the dev machine or build agent, resulting in the same build outputs.
 
@@ -16,7 +16,7 @@ For a moderately large C++ heavy repo (500 proj files, 300 of them vcxproj) insi
 <img alt="6/12 Core Desktop Comparison" src="docs/images/6CoreComparison.png" width=80%>
 <img alt="2/4 Core Laptop Comparison" src="docs/images/2CoreLaptopComparison.png" width=80%>
 
-(As of Sep 22, 2019. 25 build agents plus service coordinator VM in shared 96-core team pool with from 2 to 16 cores per agent, Azure D2 v2 Windows SKU, which would cost approximately $2000/month in VM time when running only during business hours 50 hours/week and paying full retail per-hour prices. cl.exe remoting only. Debug full build with no LTCG linking. MSBuild parallelism settings at +50% meaning /m:18 for the 6/12 core and /m:6 for the 2/4 core. AnyBuild MinParallelism=4 to remote only larger compilations.)
+(As of Oct 24, 2019. 19 build agents plus service coordinator VM in shared 100-core team pool with from 2 to 32 cores per agent, Azure D2 v2 Windows SKU, which would cost approximately $2500/month in VM time when running with dynamic VM scaling and business hours minimum sizing and paying full retail per-hour prices. cl.exe remoting only. Debug full build with no LTCG linking. MSBuild parallelism settings at +25% meaning /m:15 for the 6/12 core and /m:5 for the 2/4 core. AnyBuild MinParallelism=3 to remote only larger compilations.)
 
 ## More Details
 AnyBuild provides the following benefits for developers:
