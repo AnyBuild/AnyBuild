@@ -2,14 +2,13 @@
 
 <img alt="AnyBuild Icon" src="src/Branding/AnyBuild215x215.png" width=15%>
 
-## Introduction
 AnyBuild is a build remote execution system that allows seamlessly remoting developer desktop and CI build agent load into Microsoft Azure. For larger code repositories this can result in significant speedups, particularly for less capable dev machines and build VMs. AnyBuild remotes the most expensive operations while leaving small build-test-rebuild commands just as fast.
 
 * See the BazelCon 2019 (December 12, 2019) materials:
   * [Slides](https://docs.google.com/presentation/d/1RUh2nju6JfBYERdo6G2G3nA3H2ge-9GoDNYxu8zNRKw/edit?usp=sharing)
   * [Bazel Loopback Demo Video](https://drive.google.com/open?id=1hO2hDE6EFebbK38AM0BkW7t1pFArg-g5)
   * [Bazel 632 Azure Agent Demo Video](https://drive.google.com/open?id=1QZ2UgMQZsI9600Ja-GdlFRnivd_KQIWu)
-  * Recorded talk: (Pending BazelCon posting to YouTube)
+  * [Recorded talk](https://youtu.be/q3RAOwezexU)
 * An older set of slides from the [London Build Meetup](http://build-london.com/) (October 1, 2019) [slides](./docs/presentations/20191001_MicrosoftRemoteExecution_LondonBuildMeetup.pptx).
 * A slightly updated but much shorter version for the Facebook Seattle CI Meetup (November 20, 2019) is [here](./docs/presentations/20191120_MicrosoftRemoteExecution_FacebookCIMeetup.pptx).
 
