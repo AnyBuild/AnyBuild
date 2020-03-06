@@ -9,6 +9,7 @@ AnyBuild is a build remote execution system that allows seamlessly remoting deve
   * [Bazel Loopback Demo Video](https://drive.google.com/open?id=1hO2hDE6EFebbK38AM0BkW7t1pFArg-g5)
   * [Bazel 632 Azure Agent Demo Video](https://drive.google.com/open?id=1QZ2UgMQZsI9600Ja-GdlFRnivd_KQIWu)
   * [Recorded talk](https://youtu.be/q3RAOwezexU)
+  * The BuildXL Two-Phase Cache algorithm, crucial to handling uncertainty in predicted inputs and different from the Bazel cache, is covered in the [BuildXL documentation](https://github.com/Microsoft/BuildXL/blob/master/Public/Src/Cache/README.md).
 * An older set of slides from the [London Build Meetup](http://build-london.com/) (October 1, 2019) [slides](./docs/presentations/20191001_MicrosoftRemoteExecution_LondonBuildMeetup.pptx).
 * A slightly updated but much shorter version for the Facebook Seattle CI Meetup (November 20, 2019) is [here](./docs/presentations/20191120_MicrosoftRemoteExecution_FacebookCIMeetup.pptx).
 
@@ -41,7 +42,7 @@ AnyBuild provides the following benefits for developers:
 ## Remoting More Than MSBuild
 With specific settings you can remote just about anything, and wrap just about any top-level build engine process. AnyBuild uses Windows [Detours](https://github.com/Microsoft/Detours) logic to hook CreateProcess calls and decides what to remote and what to run locally.
 
-We've run Gulp builds with remoting of Mocha unit tests. If the top-level build tool is a graphics rendering coordinator that can run multiple sub-processes in parallel, you can remote the rendering jobs to beefy multi-core or GPU-enabled agents (of course, check your software's licensing agreements, and remember if it checks the registry it's not going to work.) Refactor a TensorFlow training set, e.g. hyperparameter space searches, into multiple parallel sub-processes run under a build engine and remote the individual training processes to big agents.
+We've run Gulp builds with remoting of Mocha unit tests. If the top-level build tool is a graphics rendering coordinator that can run multiple sub-processes in parallel, you can remote the rendering jobs to beefy multi-core or GPU-enabled agents (of course, check your software's licensing agreements, and remember if it checks the registry it's not going to work). Refactor a TensorFlow training set, e.g. hyperparameter space searches, into multiple parallel sub-processes run under a build engine and remote the individual training processes to GPU-enabled agents.
 
 # Contributing
 See [CONTRIBUTING](CONTRIBUTING.md).
