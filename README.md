@@ -1,4 +1,4 @@
-# Microsoft AnyBuild
+# AnyBuild
 
 <img alt="AnyBuild Icon" src="src/Branding/AnyBuild215x215.png" width=15%>
 
@@ -48,7 +48,7 @@ AnyBuild provides the following benefits for developers:
 ## Remoting More Than Build
 With specific settings you can remote just about anything, and wrap just about any top-level "build" engine process. AnyBuild uses Windows [Detours](https://github.com/Microsoft/Detours) and Linux Interpose to hook process creation APIs, and decides what to remote and what to run locally.
 
-We've run Gulp builds with remoting of Mocha unit tests (see a [test repo](https://github.com/Microsoft/AnyBuildGulpTest) we use forregression testing under Windows and Linux). If the top-level build tool is a graphics rendering coordinator that can run multiple sub-processes in parallel, you can remote the rendering jobs to beefy multi-core or GPU-enabled agents (of course, check your software's licensing agreements, and remember if it checks the registry it's not going to work). Refactor a TensorFlow training set, e.g. hyperparameter space searches, into multiple parallel sub-processes run under a top-level coordination process and remote the individual training processes to GPU-enabled agents.
+We've run Gulp builds with remoting of Mocha unit tests (see a [test repo](https://github.com/Microsoft/AnyBuildGulpTest) we use for regression testing under Windows and Linux). If the top-level build tool is a graphics rendering coordinator that can run multiple sub-processes in parallel, you can remote the rendering jobs to beefy multi-core or GPU-enabled agents (of course, check your software's licensing agreements, and remember if it checks the registry it's not going to work). Refactor a TensorFlow training set, e.g. hyperparameter space searches, into multiple parallel sub-processes run under a top-level coordination process and remote the individual training processes to GPU-enabled agents.
 
 # Contributing
 See [CONTRIBUTING](CONTRIBUTING.md).
