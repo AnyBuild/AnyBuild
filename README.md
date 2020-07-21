@@ -9,7 +9,7 @@ Windows support was presented at BazelCon 2019 and other build venues. In Spring
 * Linux support with the same semantics as the Windows version, using a multi-layer virtual filesystem implementation, Interpose instead of Detours at the client, and an initial version of BuildXL's sandboxing at the agent that, like the macOS sandbox for BuildXL, uses Interpose for tracking I/O API usage.
 * Multi-layer local and distributed action cache for build outputs, using a new evolution of the scalable datacenter cache for [CloudBuild](https://www.microsoft.com/en-us/research/publication/cloudbuild-microsofts-distributed-and-caching-build-service/), built atop the Bazel remote caching APIs but with [Two-Phase Caching](https://github.com/Microsoft/BuildXL/blob/master/Public/Src/Cache/README.md) added to handle uncertainty in build inputs.
 
-Presentations, sides, and links:
+Presentations, slides, and links:
 * See the BazelCon 2019 (December 12, 2019) materials:
   * [Slides](https://docs.google.com/presentation/d/1RUh2nju6JfBYERdo6G2G3nA3H2ge-9GoDNYxu8zNRKw/edit?usp=sharing)
   * [Bazel Loopback Demo Video](https://drive.google.com/open?id=1hO2hDE6EFebbK38AM0BkW7t1pFArg-g5)

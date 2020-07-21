@@ -15,13 +15,11 @@ The Code of Conduct this project has adopted is described in: [CODE_OF_CONDUCT.m
 
 When you are ready to proceed with making a change, get set up to build the code (see [README](README.md)) and familiarize yourself with our developer workflow. 
 
-If you want to run the validation that runs in the PR locally, we have an integration suite that can be run with: `RunCheckinTests.cmd`
-
 These two blogs posts on contributing code to open source projects are good too: [Open Source Contribution Etiquette](http://tirania.org/blog/archive/2010/Dec-31.html) by Miguel de Icaza and [Don’t “Push” Your Pull Requests](https://www.igvita.com/2011/12/19/dont-push-your-pull-requests/) by Ilya Grigorik.
 
 ## Creating Issues
 
-- **DO** use a descriptive title that identifies the issue to be addressed or the requested feature. For example, when describing an issue where the compiler is not behaving as expected, write your bug title in terms of what the compiler should do rather than what it is doing – “C# compiler should report CS1234 when Xyz is used in Abcd.”
+- **DO** use a descriptive title that identifies the issue to be addressed or the requested feature. For example, when describing an issue where the system is not behaving as expected, write your bug title in terms of what the system should do rather than what it is doing – “AnyBuild should statically predict MSVC c1xx.dll on Windows.”
 - **DO** specify a detailed description of the issue or requested feature.
 - **DO** provide the following for bug reports
     - Describe the expected behavior and the actual behavior. If it is not self-evident such as in the case of a crash, provide an explanation for why the expected behavior is expected.
