@@ -4,8 +4,9 @@
 
 AnyBuild is a build remote execution system that allows seamlessly remoting developer desktop and CI build agent load into Microsoft Azure. For larger code repositories this can result in significant speedups, particularly for less capable dev machines and build VMs. AnyBuild remotes the most expensive operations while leaving small dev inner loop build-test-rebuild commands just as fast.
 
-Windows support was presented at BazelCon 2019 and other build venues. In Spring 2020 we added:
+Windows support was presented at BazelCon 2019 and other build venues. In 2020 we added:
 
+* A [proposed change](https://github.com/bazelbuild/remote-apis/issues/156) to the Bazel Remote Execution standard adding AnyBuild's dynamic execution and two-phase caching techniques.
 * Linux support with the same semantics as the Windows version, using a multi-layer virtual filesystem implementation, Interpose instead of Detours at the client, and an initial version of BuildXL's sandboxing at the agent that, like the macOS sandbox for BuildXL, uses Interpose for tracking I/O API usage.
 * Multi-layer local and distributed action cache for build outputs, using a new evolution of the scalable datacenter cache for [CloudBuild](https://www.microsoft.com/en-us/research/publication/cloudbuild-microsofts-distributed-and-caching-build-service/), built atop the Bazel remote caching APIs but with [Two-Phase Caching](https://github.com/Microsoft/BuildXL/blob/master/Public/Src/Cache/README.md) added to handle uncertainty in build inputs.
 
