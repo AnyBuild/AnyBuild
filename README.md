@@ -1,6 +1,4 @@
-# AnyBuild
-
-<img alt="AnyBuild Icon" src="src/Branding/AnyBuild215x215.png" width=15%>
+<img alt="AnyBuild Supporting Graphic" src="src/Branding/AnyBuild519x108.png" width=100%>
 
 AnyBuild is a build remote execution system that allows seamlessly remoting developer desktop and CI build agent load into Microsoft Azure. For larger code repositories this can result in significant speedups, particularly for less capable dev machines and build VMs. AnyBuild remotes the most expensive operations while leaving small dev inner loop build-test-rebuild commands just as fast.
 
